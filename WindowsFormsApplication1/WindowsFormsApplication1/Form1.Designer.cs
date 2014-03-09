@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.cityTab1 = new System.Windows.Forms.Label();
+            this.cityLabelTab1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.dayMenuTab1 = new System.Windows.Forms.ComboBox();
             this.monthMenuTab1 = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,6 @@
             this.numChildTextBox = new System.Windows.Forms.TextBox();
             this.numAdultsTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.addrTextBox2 = new System.Windows.Forms.TextBox();
             this.addrNumNameTextBox1 = new System.Windows.Forms.TextBox();
             this.miTextBox = new System.Windows.Forms.TextBox();
             this.lNameTextBox = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@
             this.numChildLabel = new System.Windows.Forms.Label();
             this.numAdultsLabel = new System.Windows.Forms.Label();
             this.phoneLabel2 = new System.Windows.Forms.Label();
-            this.addrLabel2 = new System.Windows.Forms.Label();
             this.addrNumName1 = new System.Windows.Forms.Label();
             this.miLabel = new System.Windows.Forms.Label();
             this.lNameLabel = new System.Windows.Forms.Label();
@@ -90,6 +88,19 @@
             this.viewAllAdults = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewAllChildren = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewAllPrevVisit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityTextBox1 = new System.Windows.Forms.TextBox();
+            this.stateLabel1 = new System.Windows.Forms.Label();
+            this.stateTextBox1 = new System.Windows.Forms.TextBox();
+            this.zipTextBox1 = new System.Windows.Forms.TextBox();
+            this.zipLabel1 = new System.Windows.Forms.Label();
+            this.zipTextBox2 = new System.Windows.Forms.TextBox();
+            this.stateTextBox2 = new System.Windows.Forms.TextBox();
+            this.cityTextBox2 = new System.Windows.Forms.TextBox();
+            this.addrNumNameTextBox2 = new System.Windows.Forms.TextBox();
+            this.addrNumName2 = new System.Windows.Forms.Label();
+            this.cityLabel2Tab1 = new System.Windows.Forms.Label();
+            this.stateLabel2 = new System.Windows.Forms.Label();
+            this.zipLabel2 = new System.Windows.Forms.Label();
             this.tabs.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,7 +113,6 @@
             // 
             // tabs
             // 
-            this.tabs.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabs.Controls.Add(this.tabPage4);
             this.tabs.Controls.Add(this.tabPage1);
             this.tabs.Controls.Add(this.tabPage2);
@@ -118,7 +128,20 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabPage4.Controls.Add(this.cityTab1);
+            this.tabPage4.Controls.Add(this.zipLabel2);
+            this.tabPage4.Controls.Add(this.stateLabel2);
+            this.tabPage4.Controls.Add(this.cityLabel2Tab1);
+            this.tabPage4.Controls.Add(this.zipTextBox2);
+            this.tabPage4.Controls.Add(this.stateTextBox2);
+            this.tabPage4.Controls.Add(this.cityTextBox2);
+            this.tabPage4.Controls.Add(this.addrNumNameTextBox2);
+            this.tabPage4.Controls.Add(this.addrNumName2);
+            this.tabPage4.Controls.Add(this.zipLabel1);
+            this.tabPage4.Controls.Add(this.zipTextBox1);
+            this.tabPage4.Controls.Add(this.stateTextBox1);
+            this.tabPage4.Controls.Add(this.stateLabel1);
+            this.tabPage4.Controls.Add(this.cityTextBox1);
+            this.tabPage4.Controls.Add(this.cityLabelTab1);
             this.tabPage4.Controls.Add(this.saveButton);
             this.tabPage4.Controls.Add(this.dayMenuTab1);
             this.tabPage4.Controls.Add(this.monthMenuTab1);
@@ -126,7 +149,6 @@
             this.tabPage4.Controls.Add(this.numChildTextBox);
             this.tabPage4.Controls.Add(this.numAdultsTextBox);
             this.tabPage4.Controls.Add(this.phoneTextBox);
-            this.tabPage4.Controls.Add(this.addrTextBox2);
             this.tabPage4.Controls.Add(this.addrNumNameTextBox1);
             this.tabPage4.Controls.Add(this.miTextBox);
             this.tabPage4.Controls.Add(this.lNameTextBox);
@@ -135,7 +157,6 @@
             this.tabPage4.Controls.Add(this.numChildLabel);
             this.tabPage4.Controls.Add(this.numAdultsLabel);
             this.tabPage4.Controls.Add(this.phoneLabel2);
-            this.tabPage4.Controls.Add(this.addrLabel2);
             this.tabPage4.Controls.Add(this.addrNumName1);
             this.tabPage4.Controls.Add(this.miLabel);
             this.tabPage4.Controls.Add(this.lNameLabel);
@@ -148,15 +169,15 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ADD NEW ENTRY";
             // 
-            // cityTab1
+            // cityLabelTab1
             // 
-            this.cityTab1.AutoSize = true;
-            this.cityTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.cityTab1.Location = new System.Drawing.Point(721, 171);
-            this.cityTab1.Name = "cityTab1";
-            this.cityTab1.Size = new System.Drawing.Size(47, 25);
-            this.cityTab1.TabIndex = 21;
-            this.cityTab1.Text = "M.I.";
+            this.cityLabelTab1.AutoSize = true;
+            this.cityLabelTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.cityLabelTab1.Location = new System.Drawing.Point(721, 171);
+            this.cityLabelTab1.Name = "cityLabelTab1";
+            this.cityLabelTab1.Size = new System.Drawing.Size(49, 25);
+            this.cityLabelTab1.TabIndex = 21;
+            this.cityLabelTab1.Text = "City";
             // 
             // saveButton
             // 
@@ -272,15 +293,6 @@
             this.phoneTextBox.Size = new System.Drawing.Size(315, 31);
             this.phoneTextBox.TabIndex = 14;
             // 
-            // addrTextBox2
-            // 
-            this.addrTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addrTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.addrTextBox2.Location = new System.Drawing.Point(176, 216);
-            this.addrTextBox2.Name = "addrTextBox2";
-            this.addrTextBox2.Size = new System.Drawing.Size(315, 31);
-            this.addrTextBox2.TabIndex = 13;
-            // 
             // addrNumNameTextBox1
             // 
             this.addrNumNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -297,7 +309,7 @@
             this.miTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.miTextBox.Location = new System.Drawing.Point(81, 135);
             this.miTextBox.Name = "miTextBox";
-            this.miTextBox.Size = new System.Drawing.Size(315, 31);
+            this.miTextBox.Size = new System.Drawing.Size(44, 31);
             this.miTextBox.TabIndex = 11;
             // 
             // lNameTextBox
@@ -357,16 +369,6 @@
             this.phoneLabel2.Size = new System.Drawing.Size(74, 25);
             this.phoneLabel2.TabIndex = 5;
             this.phoneLabel2.Text = "Phone";
-            // 
-            // addrLabel2
-            // 
-            this.addrLabel2.AutoSize = true;
-            this.addrLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.addrLabel2.Location = new System.Drawing.Point(27, 222);
-            this.addrLabel2.Name = "addrLabel2";
-            this.addrLabel2.Size = new System.Drawing.Size(150, 25);
-            this.addrLabel2.TabIndex = 4;
-            this.addrLabel2.Text = "Address Line2";
             // 
             // addrNumName1
             // 
@@ -660,7 +662,7 @@
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Size = new System.Drawing.Size(1440, 533);
+            this.dataGridView2.Size = new System.Drawing.Size(1296, 533);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -726,6 +728,129 @@
             this.viewAllPrevVisit.Name = "dataGridViewTextBoxColumn9";
             this.viewAllPrevVisit.Width = 213;
             // 
+            // cityTextBox1
+            // 
+            this.cityTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cityTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.cityTextBox1.Location = new System.Drawing.Point(776, 171);
+            this.cityTextBox1.Name = "cityTextBox1";
+            this.cityTextBox1.Size = new System.Drawing.Size(189, 31);
+            this.cityTextBox1.TabIndex = 22;
+            // 
+            // stateLabel1
+            // 
+            this.stateLabel1.AutoSize = true;
+            this.stateLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.stateLabel1.Location = new System.Drawing.Point(999, 169);
+            this.stateLabel1.Name = "stateLabel1";
+            this.stateLabel1.Size = new System.Drawing.Size(62, 25);
+            this.stateLabel1.TabIndex = 23;
+            this.stateLabel1.Text = "State";
+            // 
+            // stateTextBox1
+            // 
+            this.stateTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.stateTextBox1.Location = new System.Drawing.Point(1067, 165);
+            this.stateTextBox1.Name = "stateTextBox1";
+            this.stateTextBox1.Size = new System.Drawing.Size(90, 31);
+            this.stateTextBox1.TabIndex = 24;
+            // 
+            // zipTextBox1
+            // 
+            this.zipTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.zipTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.zipTextBox1.Location = new System.Drawing.Point(1232, 165);
+            this.zipTextBox1.Name = "zipTextBox1";
+            this.zipTextBox1.Size = new System.Drawing.Size(90, 31);
+            this.zipTextBox1.TabIndex = 25;
+            // 
+            // zipLabel1
+            // 
+            this.zipLabel1.AutoSize = true;
+            this.zipLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.zipLabel1.Location = new System.Drawing.Point(1184, 171);
+            this.zipLabel1.Name = "zipLabel1";
+            this.zipLabel1.Size = new System.Drawing.Size(42, 25);
+            this.zipLabel1.TabIndex = 26;
+            this.zipLabel1.Text = "Zip";
+            // 
+            // zipTextBox2
+            // 
+            this.zipTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.zipTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.zipTextBox2.Location = new System.Drawing.Point(1232, 213);
+            this.zipTextBox2.Name = "zipTextBox2";
+            this.zipTextBox2.Size = new System.Drawing.Size(90, 31);
+            this.zipTextBox2.TabIndex = 31;
+            // 
+            // stateTextBox2
+            // 
+            this.stateTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.stateTextBox2.Location = new System.Drawing.Point(1067, 213);
+            this.stateTextBox2.Name = "stateTextBox2";
+            this.stateTextBox2.Size = new System.Drawing.Size(90, 31);
+            this.stateTextBox2.TabIndex = 30;
+            // 
+            // cityTextBox2
+            // 
+            this.cityTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cityTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.cityTextBox2.Location = new System.Drawing.Point(776, 219);
+            this.cityTextBox2.Name = "cityTextBox2";
+            this.cityTextBox2.Size = new System.Drawing.Size(189, 31);
+            this.cityTextBox2.TabIndex = 29;
+            // 
+            // addrNumNameTextBox2
+            // 
+            this.addrNumNameTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addrNumNameTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.addrNumNameTextBox2.Location = new System.Drawing.Point(360, 219);
+            this.addrNumNameTextBox2.Name = "addrNumNameTextBox2";
+            this.addrNumNameTextBox2.Size = new System.Drawing.Size(315, 31);
+            this.addrNumNameTextBox2.TabIndex = 28;
+            // 
+            // addrNumName2
+            // 
+            this.addrNumName2.AutoSize = true;
+            this.addrNumName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.addrNumName2.Location = new System.Drawing.Point(27, 225);
+            this.addrNumName2.Name = "addrNumName2";
+            this.addrNumName2.Size = new System.Drawing.Size(332, 25);
+            this.addrNumName2.TabIndex = 27;
+            this.addrNumName2.Text = "Address Street Num. and Name 2";
+            // 
+            // cityLabel2Tab1
+            // 
+            this.cityLabel2Tab1.AutoSize = true;
+            this.cityLabel2Tab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.cityLabel2Tab1.Location = new System.Drawing.Point(721, 219);
+            this.cityLabel2Tab1.Name = "cityLabel2Tab1";
+            this.cityLabel2Tab1.Size = new System.Drawing.Size(49, 25);
+            this.cityLabel2Tab1.TabIndex = 32;
+            this.cityLabel2Tab1.Text = "City";
+            // 
+            // stateLabel2
+            // 
+            this.stateLabel2.AutoSize = true;
+            this.stateLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.stateLabel2.Location = new System.Drawing.Point(999, 213);
+            this.stateLabel2.Name = "stateLabel2";
+            this.stateLabel2.Size = new System.Drawing.Size(62, 25);
+            this.stateLabel2.TabIndex = 33;
+            this.stateLabel2.Text = "State";
+            // 
+            // zipLabel2
+            // 
+            this.zipLabel2.AutoSize = true;
+            this.zipLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.zipLabel2.Location = new System.Drawing.Point(1184, 213);
+            this.zipLabel2.Name = "zipLabel2";
+            this.zipLabel2.Size = new System.Drawing.Size(42, 25);
+            this.zipLabel2.TabIndex = 34;
+            this.zipLabel2.Text = "Zip";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,7 +887,6 @@
         private System.Windows.Forms.Label numChildLabel;
         private System.Windows.Forms.Label numAdultsLabel;
         private System.Windows.Forms.Label phoneLabel2;
-        private System.Windows.Forms.Label addrLabel2;
         private System.Windows.Forms.Label addrNumName1;
         private System.Windows.Forms.ComboBox dayMenuTab1;
         private System.Windows.Forms.ComboBox monthMenuTab1;
@@ -770,7 +894,6 @@
         private System.Windows.Forms.TextBox numChildTextBox;
         private System.Windows.Forms.TextBox numAdultsTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox addrTextBox2;
         private System.Windows.Forms.TextBox addrNumNameTextBox1;
         private System.Windows.Forms.TextBox miTextBox;
         private System.Windows.Forms.TextBox lNameTextBox;
@@ -808,7 +931,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn viewAllChildren;
         private System.Windows.Forms.DataGridViewTextBoxColumn viewAllPrevVisit;
         private System.Windows.Forms.TextBox yearMenuTab3;
-        private System.Windows.Forms.Label cityTab1;
+        private System.Windows.Forms.Label cityLabelTab1;
+        private System.Windows.Forms.TextBox stateTextBox1;
+        private System.Windows.Forms.Label stateLabel1;
+        private System.Windows.Forms.TextBox cityTextBox1;
+        private System.Windows.Forms.Label zipLabel2;
+        private System.Windows.Forms.Label stateLabel2;
+        private System.Windows.Forms.Label cityLabel2Tab1;
+        private System.Windows.Forms.TextBox zipTextBox2;
+        private System.Windows.Forms.TextBox stateTextBox2;
+        private System.Windows.Forms.TextBox cityTextBox2;
+        private System.Windows.Forms.TextBox addrNumNameTextBox2;
+        private System.Windows.Forms.Label addrNumName2;
+        private System.Windows.Forms.Label zipLabel1;
+        private System.Windows.Forms.TextBox zipTextBox1;
     }
 }
 

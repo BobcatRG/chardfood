@@ -46,8 +46,8 @@ namespace WindowsFormsApplication1
             uid = "admin";
             password = "admin";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" + 
-		    database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
             connection2 = new MySqlConnection(connectionString);
@@ -120,16 +120,16 @@ namespace WindowsFormsApplication1
         {
             //Create a list to store the result
             List<Patron> list = new List<Patron>();
-            
+
             //Open connection
             if (this.OpenConnection() == true)
             {
-             
+
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                
+
                 while (dataReader.Read())
                 {
                     String id = dataReader.GetString(0);
@@ -144,8 +144,11 @@ namespace WindowsFormsApplication1
                     String city = "";
                     String state = "";
                     String zip = "";
+                    String city2 = "";
+                    String state2 = "";
+                    String zip2 = "";
 
-                    
+
 
                     connection2.Open();
                     String query2 = "SELECT * FROM address WHERE patron_id = '" + id + "'";
@@ -162,13 +165,16 @@ namespace WindowsFormsApplication1
                         city = dataReader2.GetString(4);
                         state = dataReader2.GetString(5);
                         zip = dataReader2.GetString(6);
+                        city2 = dataReader2.GetString(7);
+                        state2 = dataReader2.GetString(8);
+                        zip2 = dataReader2.GetString(9);
 
                     }
-                    
-                    
-                    
-                    int numChild=0;
-                    int numAdult=0;
+
+
+
+                    int numChild = 0;
+                    int numAdult = 0;
                     DateTime date = new DateTime();
 
 
@@ -177,14 +183,14 @@ namespace WindowsFormsApplication1
                     String query3 = "SELECT * FROM previousvisits WHERE patron_id = '" + id + "'";
                     MySqlCommand cmd3 = new MySqlCommand(query3, connection3);
                     MySqlDataReader dataReader3 = cmd3.ExecuteReader();
-                  //  MessageBox.Show("jjd" + date.ToString() + " " + numChild + " " + numAdult);
+                    //  MessageBox.Show("jjd" + date.ToString() + " " + numChild + " " + numAdult);
 
                     while (dataReader3.Read())
                     {
                         date = (DateTime)dataReader3.GetValue(1);
                         numChild = (int)dataReader3.GetValue(2);
                         numAdult = (int)dataReader3.GetValue(3);
-                        
+
                     }
 
 
@@ -195,12 +201,12 @@ namespace WindowsFormsApplication1
                     connection3.Close();
                     dataReader3.Close();
 
-                   
-                    
+
+
 
                     Address address = new Address(Int32.Parse(id), stNum, addrLine1, addrLine2, city, state, zip);
-                    PreviousVisit prevVis = new PreviousVisit(Int32.Parse(id),numChild,numAdult,date);
-                    Patron patron = new Patron(Int32.Parse(id), fName, lName, mInitial, phone, address,prevVis);
+                    PreviousVisit prevVis = new PreviousVisit(Int32.Parse(id), numChild, numAdult, date);
+                    Patron patron = new Patron(Int32.Parse(id), fName, lName, mInitial, phone, address, prevVis);
 
                     list.Add(patron);
                 }

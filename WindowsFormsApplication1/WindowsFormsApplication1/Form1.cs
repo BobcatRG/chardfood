@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-      
+
         public Form1()
         {
             /*
@@ -46,11 +46,11 @@ namespace WindowsFormsApplication1
                 String adults = "";
                 adults += list[x].NumAdults;
                 string[] row = { list[x].FirstName, list[x].LastName, list[x].MiddleInitial, list[x].AddressLine1, list[x].AddressLine2, list[x].Phone, children, adults, date };
-                dataGridView2.Rows.Add(row); 
+                dataGridView2.Rows.Add(row);
             }
         }
 
-
+       
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,6 +77,11 @@ namespace WindowsFormsApplication1
         }
 
         private void addrTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addrTextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

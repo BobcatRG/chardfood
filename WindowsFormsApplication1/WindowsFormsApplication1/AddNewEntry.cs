@@ -64,13 +64,11 @@ namespace WindowsFormsApplication1
             DBConnect db = new DBConnect();
             //need to fill in addr
             Address addr = new Address();
-            //Date d = new Date();
-            //d.Day = cust.dayTab1;
-            //d.Month = cust.monthTab1;
-            //d.Year = cust.yearTab1;
-            //PreviousVisit pv = new PreviousVisit(0, cust.numChildTextField, cust.numAdultsTextField, d);
-            //Patron p = new Patron(0, cust.fNameTextField, cust.lNameTextField, cust.miTextField, cust.phoneTextField, addr, pv);
-            //db.addPatron(p);
+
+            DateTime d1 = new DateTime(Convert.ToInt32(cust.yearTab1), Convert.ToInt32(cust.monthTab1), Convert.ToInt32(cust.dayTab1));
+            PreviousVisit pv = new PreviousVisit(0, Convert.ToInt32(cust.numChildTextField), Convert.ToInt32(cust.numAdultsTextField), d1);
+            Patron p = new Patron(0, cust.fNameTextField, cust.lNameTextField, cust.miTextField, cust.phoneTextField, addr, pv);
+            db.addPatron(p);
         }
     }
 }

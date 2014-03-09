@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
 
         public Patron()
         {
-            setPatron(0, "", "", "", "", null,null);
+            setPatron(0, "", "", "", "", null, null);
         }
 
         public Patron(int id, String firstName, String lastName, String middleInitial, String phone, Address address, PreviousVisit previousVisit)
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
 
         public void setPatron(int id, String firstName, String lastName, String middleInitial, String phone, Address address, PreviousVisit previousVisit)
         {
-            this.id = id; 
+            this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
             this.middleInitial = middleInitial;
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1
 
         public int NumChildren
         {
-            set { pv.NumChildren= value; }
+            set { pv.NumChildren = value; }
             get { return pv.NumChildren; }
         }
 

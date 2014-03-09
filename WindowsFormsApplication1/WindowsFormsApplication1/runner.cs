@@ -7,7 +7,6 @@ namespace WindowsFormsApplication1
 {
     class runner
     {
-        /*
         static void Main(string[] args)
         {
             //Establish a connection with DBConnect class to access patron table
@@ -39,8 +38,6 @@ namespace WindowsFormsApplication1
                 Console.WriteLine(" ");
             }
 
-            db.deletePatron(2);
-
             /*list = db.SelectPatron("SELECT * FROM patron WHERE firstName = 'Rob'");
             foreach (var i in list)
             {
@@ -54,7 +51,7 @@ namespace WindowsFormsApplication1
             }*/
             //db.Query("INSERT INTO patron (patron_id, firstName, lastName, middleInitial, phone) VALUES ('10', 'Tom', 'Maey', 'ff', '2353744')");
             
-            //Console.ReadLine();
+            Console.ReadLine();
         }
     }
-
+}
