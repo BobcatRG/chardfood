@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.cityTab1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.dayMenuTab1 = new System.Windows.Forms.ComboBox();
             this.monthMenuTab1 = new System.Windows.Forms.ComboBox();
@@ -80,16 +81,15 @@
             this.dayMenuTab3 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityTab1 = new System.Windows.Forms.Label();
+            this.viewAllFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllMiddleInitial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllAddressLine1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllAddressLine2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllAdults = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllChildren = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAllPrevVisit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabs.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -147,6 +147,16 @@
             this.tabPage4.Size = new System.Drawing.Size(1479, 705);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ADD NEW ENTRY";
+            // 
+            // cityTab1
+            // 
+            this.cityTab1.AutoSize = true;
+            this.cityTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.cityTab1.Location = new System.Drawing.Point(721, 171);
+            this.cityTab1.Name = "cityTab1";
+            this.cityTab1.Size = new System.Drawing.Size(47, 25);
+            this.cityTab1.TabIndex = 21;
+            this.cityTab1.Text = "M.I.";
             // 
             // saveButton
             // 
@@ -636,95 +646,85 @@
             // 
             this.dataGridView2.ColumnHeadersHeight = 40;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.viewAllFirstName,
+            this.viewAllLastName,
+            this.viewAllMiddleInitial,
+            this.viewAllAddressLine1,
+            this.viewAllAddressLine2,
+            this.viewAllPhone,
+            this.viewAllAdults,
+            this.viewAllChildren,
+            this.viewAllPrevVisit});
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView2.Location = new System.Drawing.Point(39, 34);
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Size = new System.Drawing.Size(1296, 533);
+            this.dataGridView2.Size = new System.Drawing.Size(1440, 533);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.FillWeight = 10F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "FirstName";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 236;
+            this.viewAllFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllFirstName.FillWeight = 10F;
+            this.viewAllFirstName.HeaderText = "FirstName";
+            this.viewAllFirstName.Name = "dataGridViewTextBoxColumn1";
+            this.viewAllFirstName.Width = 236;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn2.HeaderText = "LastName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 233;
+            this.viewAllLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllLastName.HeaderText = "LastName";
+            this.viewAllLastName.Name = "dataGridViewTextBoxColumn2";
+            this.viewAllLastName.Width = 233;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "MI";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.viewAllMiddleInitial.HeaderText = "MI";
+            this.viewAllMiddleInitial.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn4.HeaderText = "AddressLine1";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 299;
+            this.viewAllAddressLine1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.viewAllAddressLine1.HeaderText = "AddressLine1";
+            this.viewAllAddressLine1.Name = "dataGridViewTextBoxColumn4";
+            this.viewAllAddressLine1.Width = 299;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Address Line 2";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 321;
+            this.viewAllAddressLine2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllAddressLine2.HeaderText = "Address Line 2";
+            this.viewAllAddressLine2.Name = "dataGridViewTextBoxColumn5";
+            this.viewAllAddressLine2.Width = 321;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Phone";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 164;
+            this.viewAllPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllPhone.HeaderText = "Phone";
+            this.viewAllPhone.Name = "dataGridViewTextBoxColumn6";
+            this.viewAllPhone.Width = 164;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Adults";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 160;
+            this.viewAllAdults.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllAdults.HeaderText = "Adults";
+            this.viewAllAdults.Name = "dataGridViewTextBoxColumn7";
+            this.viewAllAdults.Width = 160;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Children";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 201;
+            this.viewAllChildren.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllChildren.HeaderText = "Children";
+            this.viewAllChildren.Name = "dataGridViewTextBoxColumn8";
+            this.viewAllChildren.Width = 201;
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Last Visit";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 213;
-            // 
-            // cityTab1
-            // 
-            this.cityTab1.AutoSize = true;
-            this.cityTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.cityTab1.Location = new System.Drawing.Point(721, 171);
-            this.cityTab1.Name = "cityTab1";
-            this.cityTab1.Size = new System.Drawing.Size(47, 25);
-            this.cityTab1.TabIndex = 21;
-            this.cityTab1.Text = "M.I.";
+            this.viewAllPrevVisit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.viewAllPrevVisit.HeaderText = "Last Visit";
+            this.viewAllPrevVisit.Name = "dataGridViewTextBoxColumn9";
+            this.viewAllPrevVisit.Width = 213;
             // 
             // Form1
             // 
@@ -798,15 +798,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn children;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastVisit;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllMiddleInitial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAddressLine1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAddressLine2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAdults;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllChildren;
+        private System.Windows.Forms.DataGridViewTextBoxColumn viewAllPrevVisit;
         private System.Windows.Forms.TextBox yearMenuTab3;
         private System.Windows.Forms.Label cityTab1;
     }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace databaseConn
+namespace WindowsFormsApplication1
 {
     class PreviousVisit
     {
+        private int id;
         private int numChildren;
         private int numAdults;
         private DateTime date = new DateTime();
@@ -14,12 +15,18 @@ namespace databaseConn
         public PreviousVisit()
         {
             DateTime d=new DateTime ();
-            setPreviousVisit(0,0,d);
+            setPreviousVisit(0,0,0,d);
         }
 
-        public PreviousVisit(int numC, int numA, DateTime d)
+        public PreviousVisit(int id, int numC, int numA, DateTime d)
         {
-            setPreviousVisit(numC, numA, d);
+            setPreviousVisit(id,numC, numA, d);
+        }
+
+        public int Id
+        {
+            set { id = value; }
+            get { return id; }
         }
 
         public int NumChildren
@@ -40,8 +47,9 @@ namespace databaseConn
             get { return date; }
         }
 
-        public void setPreviousVisit(int numC, int numA, DateTime d)
+        public void setPreviousVisit(int id,int numC, int numA, DateTime d)
         {
+            this.id=id;
             this.numAdults = numA;
             this.numChildren = numC;
             this.date = d;

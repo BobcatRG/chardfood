@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace databaseConn
+namespace WindowsFormsApplication1
 {
     class runner
     {
+        /*
         static void Main(string[] args)
         {
             //Establish a connection with DBConnect class to access patron table
@@ -38,6 +39,8 @@ namespace databaseConn
                 Console.WriteLine(" ");
             }
 
+            db.deletePatron(2);
+
             /*list = db.SelectPatron("SELECT * FROM patron WHERE firstName = 'Rob'");
             foreach (var i in list)
             {
@@ -51,7 +54,7 @@ namespace databaseConn
             }*/
             //db.Query("INSERT INTO patron (patron_id, firstName, lastName, middleInitial, phone) VALUES ('10', 'Tom', 'Maey', 'ff', '2353744')");
             
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
-}
+

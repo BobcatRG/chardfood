@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
 {
     class DBConnect
     {
-        private MySqlConnection connection;
+        private MySqlConnection connection;//for connecting to patron database
         private MySqlConnection connection2;
         private MySqlConnection connection3;
 
@@ -43,8 +43,8 @@ namespace WindowsFormsApplication1
         {
             server = "localhost";
             database = "patrondb";
-            uid = "root";
-            password = "root";
+            uid = "admin";
+            password = "admin";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + 
 		    database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
@@ -184,8 +184,7 @@ namespace WindowsFormsApplication1
                         date = (DateTime)dataReader3.GetValue(1);
                         numChild = (int)dataReader3.GetValue(2);
                         numAdult = (int)dataReader3.GetValue(3);
-                        MessageBox.Show("jjd"+date.ToString() + " " + numChild + " " + numAdult);
-                        Console.WriteLine(numChild+"hdushpidhsiop");
+                        
                     }
 
 
@@ -200,7 +199,7 @@ namespace WindowsFormsApplication1
                     
 
                     Address address = new Address(Int32.Parse(id), stNum, addrLine1, addrLine2, city, state, zip);
-                    PreviousVisit prevVis = new PreviousVisit(numChild,numAdult,date);
+                    PreviousVisit prevVis = new PreviousVisit(Int32.Parse(id),numChild,numAdult,date);
                     Patron patron = new Patron(Int32.Parse(id), fName, lName, mInitial, phone, address,prevVis);
 
                     list.Add(patron);
@@ -254,9 +253,32 @@ namespace WindowsFormsApplication1
 
                 cmd1.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
+
+        public void deletePatron(int id)
+        {
+
+            if (this.OpenConnection())
+            {
+                String query = "DELETE  FROM patron WHERE patron_id='" + id + "'";
+                String query1 = "DELETE FROM address WHERE patron_id='" + id + "'";
+                String query2 = "DELETE FROM previousvisits WHERE patron_id='" + id + "'";
+
+                MySqlCommand cmd1 = new MySqlCommand(query, connection);
+                MySqlCommand cmd2 = new MySqlCommand(query1, connection);
+                MySqlCommand cmd3 = new MySqlCommand(query2, connection);
+
+                cmd1.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
 
                 this.CloseConnection();
             }
+
+
         }
 
         //Count statement

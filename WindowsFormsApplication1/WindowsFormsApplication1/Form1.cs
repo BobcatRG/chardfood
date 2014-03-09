@@ -15,10 +15,42 @@ namespace WindowsFormsApplication1
       
         public Form1()
         {
+            /*
+             * dataGridView2
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllFirstName;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllLastName;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllMiddleInitial;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAddressLine1;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAddressLine2;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllPhone;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllAdults;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllChildren;
+            private System.Windows.Forms.DataGridViewTextBoxColumn viewAllPrevVisit;
+            */
+
             InitializeComponent();
+            DBConnect db = new DBConnect();
+
+            int count = db.Count("SELECT * FROM patron");
+
+            String[] rows = new String[count];
+
+            List<Patron> list = new List<Patron>();
+            list = db.SelectPatron("SELECT * FROM patron");
+
+            for (int x = 0; x < list.Count; x++)
+            {
+                String date = list[x].Date.Month + "/" + list[x].Date.Day + "/" + list[x].Date.Year;
+                String children = "";
+                children += list[x].NumChildren;
+                String adults = "";
+                adults += list[x].NumAdults;
+                string[] row = { list[x].FirstName, list[x].LastName, list[x].MiddleInitial, list[x].AddressLine1, list[x].AddressLine2, list[x].Phone, children, adults, date };
+                dataGridView2.Rows.Add(row); 
+            }
         }
 
-       
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
