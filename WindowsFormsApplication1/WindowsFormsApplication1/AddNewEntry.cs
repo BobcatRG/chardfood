@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+namespace WindowsFormsApplication1
+{
+    public class AddNewEntry
+    {
+        private String fNameTextField;
+        private String lNameTextField;
+        private String miTextField;
+        private String addrTextField;
+        private String addrTextField2;
+        private String phoneTextField;
+        private String prevVisTextField;
+        private String numChildTextField;
+        private String numAdultsTextField;
+        private String monthTab1;
+        private String yearTab1;
+        private String dayTab1;
+
+        public AddNewEntry()
+        {
+            fNameTextField = "";
+            lNameTextField = "";
+            miTextField = "";
+            addrTextField = "";
+            addrTextField2 = "";
+            phoneTextField = "";
+            prevVisTextField = "";
+            numChildTextField = "";
+            numAdultsTextField = "";
+            monthTab1 = "";
+            yearTab1 = "";
+            dayTab1 = "";
+            
+        }
+        public AddNewEntry(String fName, String lName, String mi, String addr1, String addr2, String phone, String numC, String numA, String month, String year, String day)
+        {
+            fNameTextField = fName;
+            lNameTextField = lName;
+            miTextField = mi;
+            addrTextField = addr1;
+            addrTextField2 = addr2;
+            phoneTextField = phone;
+            //prevVisTextField = prevVis;
+            numChildTextField = numC;
+            numAdultsTextField = numA;
+            monthTab1 = month;
+            yearTab1 = year;
+            dayTab1 = day;
+        }
+        public void save(AddNewEntry cust)
+        {
+            DBConnect db = new DBConnect();
+            //need to fill in addr
+            Address addr = new Address();
+            Date d = new Date();
+            d.Day = cust.dayTab1;
+            d.Month = cust.monthTab1;
+            d.Year = cust.yearTab1;
+            PreviousVisit pv = new PreviousVisit(0, cust.numChildTextField, cust.numAdultsTextField, d);
+            Patron p = new Patron(0, cust.fNameTextField, cust.lNameTextField, cust.miTextField, cust.phoneTextField, addr, pv);
+            db.addPatron(p);
+        }
+    }
+}
